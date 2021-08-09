@@ -8,7 +8,7 @@ Use the package manager pip to install the modules used, they can be found at th
 
 ## Usage
 
-# change the picture files of the person and the patch.
+make sure to change the picture files of the person and the patch.
 The program returns the patch on the face of the desired person making the person's picture unrecognizable by machines.
 
 
