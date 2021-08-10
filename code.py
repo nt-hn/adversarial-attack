@@ -243,8 +243,8 @@ def resize_patch(patch_img):
 image_size = 128
 patch_size = 0.05
 learning_rate = 0.1
-face_file = "1.png"
-patch_tobe = "ethiopia.jpg" #flag
+face_file = "sharon-pittaway-iMdsjoiftZo-unsplash.jpg"  #mask image
+patch_tobe = "omid-armin-xOjzehJ49Hk-unsplash.jpg" #face image
 
 def resize_background(background_img):
 
