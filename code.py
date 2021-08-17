@@ -79,13 +79,13 @@ def find__left_cheek(orig_image, orig_image_size):
                 temp = (temp[0]+ x, temp[1]+y)
                 cv2.circle(clone, (x, y), 1, (0, 0, 255), -1)
 
-                if name is 'mouth':
+                if name == 'mouth':
                     mouth_loc = (int(temp[0]/point_num), int(temp[1]/point_num))
 
-                elif name is 'left_eye':
+                elif name == 'left_eye':
                     left_eye_loc = (int(temp[0]/point_num) , int(temp[1]/point_num))
 
-                elif name is 'nose':
+                elif name == 'nose':
                     nose_loc = (int(temp[0]/point_num) , int(temp[1]/point_num))
 
             else:
@@ -94,7 +94,6 @@ def find__left_cheek(orig_image, orig_image_size):
             x_dif = nose_loc[0] - left_eye_loc[0]
             y_dif = nose_loc[1] - left_eye_loc[1]
             patch_center = (round((left_eye_loc[0]-x_dif*0.4)*ratio) , round((nose_loc[1]-int(y_dif*0.1))*ratio))
-
     return patch_center, round(y_dif*0.6*ratio)
 
 def find_right_cheek(orig_image, orig_image_size):
@@ -141,13 +140,13 @@ def find_right_cheek(orig_image, orig_image_size):
                 temp = (temp[0]+ x, temp[1]+y)                
                 cv2.circle(clone, (x, y), 1, (0, 0, 255), -1)
               
-                if name is 'mouth':
+                if name == 'mouth':
                     mouth_loc = (int(temp[0]/point_num), int(temp[1]/point_num))
 
-                elif name is 'right_eye':
+                elif name == 'right_eye':
                     right_eye_loc = (int(temp[0]/point_num) , int(temp[1]/point_num))
 
-                elif name is 'nose':
+                elif name == 'nose':
                     nose_loc = (int(temp[0]/point_num) , int(temp[1]/point_num))
 
             else:
@@ -243,8 +242,8 @@ def resize_patch(patch_img):
 image_size = 128
 patch_size = 0.05
 learning_rate = 0.1
-face_file = "sharon-pittaway-iMdsjoiftZo-unsplash.jpg"  #mask image
-patch_tobe = "omid-armin-xOjzehJ49Hk-unsplash.jpg" #face image
+face_file = "omid-armin-xOjzehJ49Hk-unsplash.jpg"  #face image
+patch_tobe = "sharon-pittaway-iMdsjoiftZo-unsplash.jpg" #mask image
 
 def resize_background(background_img):
 
